@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CODE GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function genQR(){
+            // var gapi="https://char.googleapis.com/chart?cht=qr&chs=";
+            var gapi=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"
+            var myimg= document.getElementById("img");
+            var mytext= document.getElementById("qrtext").value;
+            var mysize= document.getElementById("size").value;
+
+            if(mytext!=="" && mysize=="100")
+            {
+                myimg.src=gapi+"100*100"+mytext;
+            }
+          else if(mytext!=="" && mysize=="150")
+            {
+                myimg.src=gapi+"150*150"+mytext;
+
+            }
+          else if(mytext!=="" && mysize=="200")
+            {
+                myimg.src=gapi+"200*200"+mytext;
+
+            }
+          else if(mytext!=="" && mysize=="250")
+            {
+                myimg.src=gapi+"250*250"+mytext;
+                
+            }
+          else if(mytext!=="" && mysize=="300")
+          {
+                myimg.src=gapi+"300*300"+mytext;
+                  
+          }
+          else
+          {
+            alert('please enter text')
+          }
+
+
+        }
+    
+    </script>
+    <div class="grid">
+    <h2 align="center" class="head">QR CODE GENERATOR</h2>
+  <center><img src="" id="img"></center>
+
+  <select id="size" class="select">
+    <option value="100">100*100</option>
+    <option value="150">150*150</option>
+    <option value="200">200*200</option>
+    <option value="250" selected>250*250</option>
+    <option value="300">300*300</option>
+  </select>
+  <br><br>
+  <textarea placeholder="Enter Your text" id="qrtext"></textarea>
+  <br><br>
+  <input type="submit" value="Generate" class="btn" onclick="genQR()">
+  <p>Developed by komal singh chauhan</p>
+    </div>
+</body>
+</html>

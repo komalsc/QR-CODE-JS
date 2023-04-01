@@ -1,0 +1,21 @@
+body{
+text-align: center;
+background-color: aqua;
+}
+.btn{
+    color: white;
+    background-color: blue;
+} 
+.select{
+    color: white;
+    background-color: blue;
+}
+
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+
+
